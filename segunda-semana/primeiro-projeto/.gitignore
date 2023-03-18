@@ -1,0 +1,66 @@
+# Dependency directory
+node_modules
+/node_modules
+
+# Coverage reports
+coverage
+
+# API keys and secrets
+.env
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Ignore built ts files
+dist/**/*
+
+# Arquivos de build
+/dist
+/out
+/build
+/.nuxt
+/.next
+/.out
+/.firebase
+/.serverless
+/serverless
+
+# Arquivos de logs
+/logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Arquivos de cache
+.pnp
+.pnp.js
+/.pnp
+*.pnp
+*.pnp.js
+.cache
+.yarn-integrity
+.yarn-metadata.json
+.yarn-cache-lock.json
+.pnp.data.json
+
+# Arquivos de ambiente
+.env
+
+# Arquivos de tipo de compilação
+*.tsbuildinfo
+
+# Arquivos de teste
+/coverage
+
+# Outros
+*.swp
+*.bak
+*.tmp
+*.md~
+pids
+*-audit*
+results
+tmp
