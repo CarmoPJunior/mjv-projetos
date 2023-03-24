@@ -22,7 +22,7 @@
 
 ## Instalar as depêndencias de desenvolvimento
 
-> npm install typescript ts-node ts-node-dev -D
+> npm install typescript ts-node ts-node-dev  @types/cors @types/express @types/node -D
 
 ## Inicializar o typescript
 
