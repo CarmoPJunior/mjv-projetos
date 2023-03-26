@@ -1,6 +1,4 @@
-# Exercício (Primeiro Endpoint)
-
-1) Crie um projeto de node com typescript utilizando o express e as bibliotecas já ensinadas em aula e crie um endpoint GET que ao ser chamado deverá retornar o seguinte objeto: { message: 'Hello World' }
+# Exercício (Rotas)
 
 # Url Endpoint
 
@@ -35,3 +33,11 @@
 ou
 
 > npm start
+
+# Links da Aula:
+
+<https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods>
+<https://httpstatusdogs.com/>
+<https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status>
+<https://www.4devs.com.br/gerador_de_cpf>
+<https://insomnia.rest/download>
