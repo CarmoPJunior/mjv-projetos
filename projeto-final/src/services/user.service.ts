@@ -9,7 +9,7 @@ class UserService {
   async getById(id: string) {
     const user = await UserRepository.getById(id);
     if (!user) {
-      throw new Error('User not found!');
+      throw new Error('Usuário não encontrado!');
     }
     return user;
   }
@@ -22,20 +22,20 @@ class UserService {
     const user = await UserRepository.getById(id);
 
     if (!user) {
-      throw new Error('User not found!');
+      throw new Error('Usuário não encontrado!');
     }
 
     return await UserRepository.update(id, updatedFields);
   }
 
-  // async delete(id: string) {
-  //   const user = await UserRepository.getById(id);
+  async delete(id: string) {
+    const user = await UserRepository.getById(id);
 
-  //   if (!user) {
-  //     throw new Error('User not found!');
-  //   }
-  //   return await UserRepository.remove(id);
-  // }
+    if (!user) {
+      throw new Error('Usuário não encontrado!');
+    }
+    return await UserRepository.remove(id);
+  }
 }
 
 export default new UserService();

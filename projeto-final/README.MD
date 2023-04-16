@@ -15,7 +15,7 @@
 
 ## Instalar as depêndencias
 
-> npm install cors express dotenv
+> npm install cors express dotenv moment
 
 ## Instalar as depêndencias de desenvolvimento
 
@@ -24,6 +24,12 @@
 ## Instalar o mongoose
 
 > npm install mongoose
+
+## Instalar as dependências de autenticação
+
+> npm install bcrypt jsonwebtoken
+
+> npm install @types/bcrypt @types/jsonwebtoken -D
 
 ## Inicializar o typescript
 

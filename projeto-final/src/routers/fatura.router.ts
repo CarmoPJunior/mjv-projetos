@@ -21,6 +21,15 @@ router.get('/:id', async (req: Request, res: Response) => {
   }
 });
 
+router.get('/porStatus/:status', async (req: Request, res: Response) => {
+  try {
+    const fatura = await FaturaService.getAllByStatus(req.params.status);
+    res.send({ Fatura: fatura });
+  } catch (error: any) {
+    res.status(500).send({ message: error.message });
+  }
+});
+
 router.post('/', async (req: Request, res: Response) => {
   try {
     await FaturaService.create(req.body);
@@ -36,6 +45,17 @@ router.put('/:id', async (req: Request, res: Response) => {
   try {
     await FaturaService.update(id, req.body);
     res.status(200).send({ message: 'Fatura atualizada com sucesso!' });
+  } catch (error: any) {
+    res.status(500).send({ message: error.message });
+  }
+});
+
+router.put('/baixar/:id', async (req: Request, res: Response) => {
+  const id = req.params.id;
+
+  try {
+    await FaturaService.baixarFatura(id, req.body);
+    res.status(200).send({ message: 'Fatura baixada com sucesso!' });
   } catch (error: any) {
     res.status(500).send({ message: error.message });
   }

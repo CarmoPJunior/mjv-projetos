@@ -27,8 +27,7 @@ const userSchema = new Schema({
     default: getDateToday(),
   },
   updatedAt: {
-    type: Date,
-    default: Date.now
+    type: Date
   },
 });
 

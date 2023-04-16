@@ -8,6 +8,8 @@ export interface IFatura extends Document {
   descricao: string;
   valor: number;
   status: string;
+  dataVencimento: Date;
+  dataPagamento: Date;
   categoria: ICategoria['_id'];
   user: IUser['_id'];
   createdAt: Date;
@@ -22,6 +24,13 @@ const faturaSchema = new Schema({
   valor: {
     type: Number,
     required: true
+  },
+  dataVencimento: {
+    type: Date,
+    required: true
+  },
+  dataPagamento: {
+    type: Date,
   },
   status: {
     type: String,
@@ -43,8 +52,7 @@ const faturaSchema = new Schema({
     default: getDateToday(),
   },
   updatedAt: {
-    type: Date,
-    default: Date.now
+    type: Date
   }
 });
 

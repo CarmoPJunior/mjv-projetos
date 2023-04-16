@@ -23,7 +23,7 @@ router.get('/:id', async (req: Request, res: Response) => {
 
 router.get('/porNome/:nome', async (req: Request, res: Response) => {
   try {
-    const categoria = await CategoriaService.getById(req.params.nome);
+    const categoria = await CategoriaService.getByName(req.params.nome);
     res.send({ Categoria: categoria });
   } catch (error: any) {
     res.status(500).send({ message: error.message });
