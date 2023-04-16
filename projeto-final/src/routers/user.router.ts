@@ -6,7 +6,7 @@ const router = Router();
 router.get('/', async (req: Request, res: Response) => {
   try {
     const users = await UserService.getAll();
-    res.status(200).send({ Users: users });
+    res.status(200).send({ Usuarios: users });
   } catch (error: any) {
     res.status(500).send({ message: error.message });
   }
@@ -15,15 +15,20 @@ router.get('/', async (req: Request, res: Response) => {
 router.get('/:id', async (req: Request, res: Response) => {
   try {
     const user = await UserService.getById(req.params.id);
-    res.send({ User: user });
+    res.send({ Usuario: user });
   } catch (error: any) {
     res.status(500).send({ message: error.message });
   }
 });
 
-
 router.post('/', async (req: Request, res: Response) => {
   try {
+    const { login, password } = req.body;
+
+    if (!login || !password) {
+      return res.status(400).json({ message: 'Informe o login e senha!' });
+    }
+
     await UserService.create(req.body);
     res.status(201).send({ message: 'Usuário adicionado com sucesso!' });
   } catch (error: any) {
@@ -32,9 +37,15 @@ router.post('/', async (req: Request, res: Response) => {
 });
 
 router.put('/:id', async (req: Request, res: Response) => {
-  const id = req.params.id;
-
   try {
+    const id = req.params.id;
+
+    const { login, password } = req.body;
+
+    if (!login || !password) {
+      return res.status(400).json({ message: 'Informe o login e senha!' });
+    }
+
     await UserService.update(id, req.body);
     res.status(200).send({ message: 'Usuário atualizado com sucesso!' });
   } catch (error: any) {

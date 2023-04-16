@@ -20,7 +20,8 @@ const userSchema = new Schema({
     required: true
   },
   ativo:{
-    type: Boolean
+    type: Boolean,
+    default: true
   },
   createdAt: {
     type: Date,

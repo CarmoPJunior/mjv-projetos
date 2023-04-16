@@ -4,6 +4,8 @@ import FaturaService from '../services/fatura.service';
 const router = Router();
 
 router.get('/', async (req: Request, res: Response) => {
+  console.log(  req.userId);
+
   try {
     const faturas = await FaturaService.getAll();
     res.status(200).send({ Faturas: faturas });

@@ -1,3 +1,4 @@
+import bcrypt from 'bcrypt';
 import UserRepository from '../repositories/user.repository';
 import { IUser } from '../models/user.model';
 
@@ -15,6 +16,7 @@ class UserService {
   }
 
   async create(user: IUser) {
+    user.password = await bcrypt.hash(user.password, 10);
     return await UserRepository.create(user);
   }
 
@@ -24,6 +26,8 @@ class UserService {
     if (!user) {
       throw new Error('Usuário não encontrado!');
     }
+
+    updatedFields.password = await bcrypt.hash(updatedFields.password!, 10);
 
     return await UserRepository.update(id, updatedFields);
   }
