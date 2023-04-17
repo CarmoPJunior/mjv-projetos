@@ -33,7 +33,7 @@ Criar um projeto de back-end com tema de livre escolha, porém seguindo as regra
 
 # Como rodar o projeto
 
-# 1º Baixar o repositório para sua máquina
+## 1º Baixar o repositório para sua máquina
 
 ## 2º Instalar as depêndencias
 
