@@ -1,45 +1,49 @@
-# Exercício (Services)
+# Projeto Final DevSchool Node MJV
 
-1) Com base no projeto criado anteriomente, crie a camada repository e faça a conexão com banco mongo.
 
-# Url Endpoint
+# Objetivo
 
-> localhost:3000/health
-> localhost:3000/product
+Criar um projeto de back-end com tema de livre escolha, porém seguindo as regras abaixo:
 
-# Comandos utilizados
+- Utilizar boas práticas de criação de pastas/estruturação do projeto;
+- Utilizar typescript para escrever o código;
+- Utilizar express para roteamento da aplicação;
+- Criar no mínimo dois CRUD's(Create, Read, Update e Delete) completos de alguma funcionalidade, conectando com banco de dados MongoDB;
+- Criar um endpoint para autenticação dos usuários da sua aplicação e devolver um token com expiração para 1 Hora;
+- Criar no mínimo 4 endpoints que só poderão ser acessados por usuários autenticados.
 
-## Inicializar o projeto
 
-> npm init
+# Tema escolhido
 
-## Instalar as depêndencias
+>
 
-> npm install cors express dotenv moment
+# Tecnologias utilizadas:
 
-## Instalar as depêndencias de desenvolvimento
+- Node versão v18.15;
+- cors;
+- express;
+- dotenv;
+- moment;
+- typescript;
+- ts-node;
+- ts-node-dev;
+- mongoose;
+- bcrypt;
+- jsonwebtoken;
 
-> npm install typescript ts-node ts-node-dev  @types/cors @types/express @types/node -D
+# Como rodar o projeto
+## 1º Instalar as depêndencias
 
-## Instalar o mongoose
+> npm install
 
-> npm install mongoose
+## 2ª Configurar o arquivo de variável de ambiente (.env), exemplo:
 
-## Instalar as dependências de autenticação
+> SERVER_PORT=3000
+> JWT_SECRET_KEY=DKJLSAJHDKLSAHJ456DSADSA1
+> DATABASE_URL=mongodb://127.0.0.1:27017/mjvProjetoFinalFinancas
 
-> npm install bcrypt jsonwebtoken
 
-> npm install @types/bcrypt @types/jsonwebtoken -D
-
-## Inicializar o typescript
-
-> tsc --init
-
-## Build a aplicação
-
-> tsc
-
-## Roda com tsnode
+## 3° Roda a aplicação:
 
 > npm run dev
 
@@ -47,12 +51,29 @@ ou
 
 > npm start
 
-# Links da Aula
 
-<https://www.mongodb.com/try/download/community>
-<https://www.npmjs.com/package/mongoose>
-<https://www.npmjs.com/package/dotenv>
+---
 
-Documentação Mongoose:
+# Para rodar a aplicação com o docker
 
-<https://mongoosejs.com/docs/guide.html>
+# Endpoints
+
+##
+
+> localhost:3000/health
+## Rotas de autenticação
+
+> localhost:3000/auth
+
+## Rotas de gerenciamento de usuário
+
+> localhost:3000/user
+
+## Rotas de gerenciamento categoria
+
+> localhost:3000/categoria
+
+## Rotas de gerenciamento de fatura
+
+> localhost:3000/fatura
+
