@@ -4,16 +4,17 @@ import { ICategoria } from './categoria.model';
 import { IUser } from './user.model';
 import Status from '../enums/StatusEnum';
 
-export interface IFatura extends Document {
+export interface IFatura {
+  _id?: string;
   descricao: string;
   valor: number;
   status: string;
   dataVencimento: Date;
-  dataPagamento: Date;
+  dataPagamento?: Date ;
   categoria: ICategoria['_id'];
   user: IUser['_id'];
   createdAt: Date;
-  updatedAt: Date;
+  updatedAt?: Date;
 }
 
 const faturaSchema = new Schema({

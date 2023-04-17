@@ -26,6 +26,10 @@ class AuthService {
       throw new Error('login ou senha inválidos!');
     }
 
+    if(!user._id){
+      throw new Error('Erro ao setar id usuário!');
+    }
+
     return  await this.gerarToken(user._id);
   }
 }

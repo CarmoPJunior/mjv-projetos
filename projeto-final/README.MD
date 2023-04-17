@@ -15,7 +15,7 @@ Criar um projeto de back-end com tema de livre escolha, porém seguindo as regra
 
 # Tema escolhido
 
->
+> Gerenciamento de contas a pagar
 
 # Tecnologias utilizadas:
 
@@ -32,18 +32,21 @@ Criar um projeto de back-end com tema de livre escolha, porém seguindo as regra
 - jsonwebtoken;
 
 # Como rodar o projeto
-## 1º Instalar as depêndencias
+
+# 1º Baixar o repositório para sua máquina
+
+## 2º Instalar as depêndencias
 
 > npm install
 
-## 2ª Configurar o arquivo de variável de ambiente (.env), exemplo:
+## 3ª Configurar o arquivo de variável de ambiente (.env), exemplo:
 
 > SERVER_PORT=3000
 > JWT_SECRET_KEY=DKJLSAJHDKLSAHJ456DSADSA1
 > DATABASE_URL=mongodb://127.0.0.1:27017/mjvProjetoFinalFinancas
 
 
-## 3° Roda a aplicação:
+## 4° Roda a aplicação:
 
 > npm run dev
 
@@ -52,6 +55,7 @@ ou
 > npm start
 
 
+> Obs: ao Iniciar a aplicação será inserido alguns valores para testes cadastrados na pasta seeds
 ---
 
 # Para rodar a aplicação com o docker

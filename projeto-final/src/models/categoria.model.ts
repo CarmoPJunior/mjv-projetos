@@ -1,11 +1,12 @@
 import { Document, model, Schema } from 'mongoose';
 import { getDateToday } from '../utils/dateUtil';
 
-export interface ICategoria extends Document {
+export interface ICategoria{
+  _id?: string;
   nome: string;
   descricao: string;
   createdAt: Date;
-  updatedAt: Date;
+  updatedAt?: Date ;
 }
 
 const categoriaSchema = new Schema({

@@ -12,3 +12,7 @@ Você deverá criar um projeto de back-end com tema de livre escolha, porém dev
 Você deve subir o projeto no seu github e enviar para o professor Nathan via discord assim que finalizar.
 
 # PRAZO PARA ENTREGA FINAL DO PROJETO SERÁ ATÉ DIA 18/04 ÁS 23h59
+
+
+npm install swagger-ui-express  
+npm install @types/swagger-ui-express -D

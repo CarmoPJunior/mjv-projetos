@@ -1,12 +1,13 @@
 import {Document, model, Schema } from 'mongoose';
 import { getDateToday } from '../utils/dateUtil';
 
-export interface IUser extends Document{
+export interface IUser {
+  _id?: string;
   login: string;
   password: string;
   ativo: boolean;
   createdAt: Date;
-  updatedAt: Date;
+  updatedAt?: Date ;
 }
 
 const userSchema = new Schema({
