@@ -1,0 +1,621 @@
+{
+	"info": {
+		"_postman_id": "2b7bfa56-e1a7-4bf8-a34d-934d0dfe9709",
+		"name": "MJV",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PROJETO-FINAL",
+			"item": [
+				{
+					"name": "FATURA",
+					"item": [
+						{
+							"name": "FATURA - GET ALL",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDNiNzAxMDAzMTgzZWZlNzZlZjhlMTgiLCJpYXQiOjE2ODE2MjAzMDYsImV4cCI6MTY4MTYyMzkwNn0.TsOMtsdrjAHDIoK2WS46Aav7cUprCLQID3WAALl_sJk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/fatura",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"fatura"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FATURA - GET BY ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/fatura/643b543fdee7c932fa323557",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"fatura",
+										"643b543fdee7c932fa323557"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FATURA - GET BY STATUS",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/fatura/porStatus/PAGO",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"fatura",
+										"porStatus",
+										"PAGO"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FATURA - POST",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"descricao\": \"Energia\",\r\n    \"valor\": 0,    \r\n    \"categoria\": {\r\n        \"_id\": \"643b4c0b88ac0232596a50cb\"\r\n    },\r\n    \"user\": {\r\n        \"_id\": \"643b4c0b88ac0232596a50cb\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/fatura",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"fatura"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FATURA - PUT",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"descricao\": \"Energia2\",\r\n    \"valor\": 0,    \r\n    \"categoria\": {\r\n        \"_id\": \"643b4c0b88ac0232596a50cb\"\r\n    },\r\n    \"user\": {\r\n        \"_id\": \"643b4c0b88ac0232596a50cb\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/fatura/643b543fdee7c932fa323557",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"fatura",
+										"643b543fdee7c932fa323557"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FATURA - BAIXA",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/fatura/baixar/643b54957b9d1836db6ba6c7",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"fatura",
+										"baixar",
+										"643b54957b9d1836db6ba6c7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FATURA - DELETE",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/fatura/643b543fdee7c932fa323557",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"fatura",
+										"643b543fdee7c932fa323557"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "USER",
+					"item": [
+						{
+							"name": "USER - GET ALL",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDNiNzAxMDAzMTgzZWZlNzZlZjhlMTgiLCJpYXQiOjE2ODE2MjAzMDYsImV4cCI6MTY4MTYyMzkwNn0.TsOMtsdrjAHDIoK2WS46Aav7cUprCLQID3WAALl_sJk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/user",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "USER - GET BY ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/user/643b701003183efe76ef8e18",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"643b701003183efe76ef8e18"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "USER - POST",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"login\": \"teste\",\r\n  \"password\": \"teste\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/user",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "USER - PUT",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"login\": \"teste\",\r\n  \"password\": \"teste\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/user/643b701003183efe76ef8e18",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"643b701003183efe76ef8e18"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "USER - DELETE",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"login\": \"teste\",\r\n  \"password\": \"teste\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/user/643b6ee80095813bbd38c8a2",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"643b6ee80095813bbd38c8a2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "CATEGORIA",
+					"item": [
+						{
+							"name": "CATEGORIA - GET ALL",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/categoria",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"categoria"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CATEGORIA - POST",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nome\": \"Cartão credito\",\r\n  \"descricao\": \"Cartão\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/categoria",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"categoria"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CATEGORIA - PUT",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nome\": \"Energia\",\r\n  \"descricao\": \"Cartão\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/categoria/643b4c0b88ac0232596a50cb",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"categoria",
+										"643b4c0b88ac0232596a50cb"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CATEGORIA - DELETE",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/categoria/643b4c0b88ac0232596a50cb",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"categoria",
+										"643b4c0b88ac0232596a50cb"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CATEGORIA - GET BY ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/categoria/643dbbffa4a63413dda70623",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"categoria",
+										"643dbbffa4a63413dda70623"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CATEGORIA - GET BY NAME",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/categoria/porNome/Energia",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"categoria",
+										"porNome",
+										"Energia"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "HEALTH - GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/health",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AUTH",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"login\": \"admin\",\r\n  \"password\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/auth",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EXERCICIOS",
+			"item": [
+				{
+					"name": "PRODUCT - POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Notebook S515\",\r\n    \"img\": \"https://images.samsung.com/is/image/samsung3/br-notebook-style-s51-np730xbe-kp1br-np730xbe-kp1br-fronttitanumsilver-185313138?$720_576_PNG$\",\r\n    \"price\": 5000,\r\n    \"quantity\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/product",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PRODUCT - PUT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Notebook S51ee\",\r\n    \"img\": \"https://images.samsung.com/is/image/samsungee/br-notebook-style-s51-np730xbe-kp1br-np730xbe-kp1br-fronttitanumsilver-185313138?$720_576_PNG$\",\r\n    \"price\": 5000,\r\n    \"quantity\": 50\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/product/6430b7b73024c5863506e846",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"6430b7b73024c5863506e846"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PRODUCT - GET BY ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/product/6430b23b6534df357c006e73",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"6430b23b6534df357c006e73"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PRODUCT - DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/product/6430b3e1d808c1740c8d3fae",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"6430b3e1d808c1740c8d3fae"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PRODUCT - GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/product",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

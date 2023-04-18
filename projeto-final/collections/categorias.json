@@ -1,0 +1,31 @@
+[{
+  "_id": {
+    "$oid": "643dcbab4a945850e130ecc1"
+  },
+  "nome": "Energia",
+  "descricao": "Descrição Energia",
+  "createdAt": {
+    "$date": "2023-04-17T19:43:55.485Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643dcbab4a945850e130ecc2"
+  },
+  "nome": "Água",
+  "descricao": "Descrição Água",
+  "createdAt": {
+    "$date": "2023-04-17T19:43:55.486Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643dcbab4a945850e130ecc3"
+  },
+  "nome": "Internet",
+  "descricao": "Descrição Internet",
+  "createdAt": {
+    "$date": "2023-04-17T19:43:55.486Z"
+  },
+  "__v": 0
+}]

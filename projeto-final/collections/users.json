@@ -1,0 +1,23 @@
+[{
+  "_id": {
+    "$oid": "643dcbab4a945850e130ecc5"
+  },
+  "login": "admin",
+  "password": "$2b$10$8wy7wEXvcrn9eUA6r.6q0ujlYuXg2Le4Rr.1E6OQG8qAu3nmdnayG",
+  "ativo": true,
+  "createdAt": {
+    "$date": "2023-04-17T19:43:55.896Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643dcbab4a945850e130ecc6"
+  },
+  "login": "user",
+  "password": "$2b$10$/pdNfmjFjqSywaImauIifOTWq1TjwH.HcpPLRBuTQuSmqsrOxUTOK",
+  "ativo": true,
+  "createdAt": {
+    "$date": "2023-04-17T19:43:55.896Z"
+  },
+  "__v": 0
+}]

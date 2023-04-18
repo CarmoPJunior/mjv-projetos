@@ -6,7 +6,7 @@ node_modules
 coverage
 
 # API keys and secrets
-.env
+# .env
 
 # OS metadata
 .DS_Store
@@ -47,7 +47,7 @@ lerna-debug.log*
 .pnp.data.json
 
 # Arquivos de ambiente
-.env
+# .env
 
 # Arquivos de tipo de compilação
 *.tsbuildinfo

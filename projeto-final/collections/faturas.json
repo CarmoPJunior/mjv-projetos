@@ -1,0 +1,64 @@
+[{
+  "_id": {
+    "$oid": "643dcbab4a945850e130ecca"
+  },
+  "descricao": "Fatura 1",
+  "valor": 100,
+  "dataVencimento": {
+    "$date": "2023-04-10T03:00:00.000Z"
+  },
+  "status": "PENDENTE",
+  "categoria": {
+    "$oid": "643dcbab4a945850e130ecc1"
+  },
+  "user": {
+    "$oid": "643dcbab4a945850e130ecc5"
+  },
+  "createdAt": {
+    "$date": "2023-04-17T19:43:55.935Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643dcbab4a945850e130eccb"
+  },
+  "descricao": "Fatura 2",
+  "valor": 200,
+  "dataVencimento": {
+    "$date": "2023-04-10T03:00:00.000Z"
+  },
+  "dataPagamento": {
+    "$date": "2023-04-15T03:00:00.000Z"
+  },
+  "status": "PAGO",
+  "categoria": {
+    "$oid": "643dcbab4a945850e130ecc1"
+  },
+  "user": {
+    "$oid": "643dcbab4a945850e130ecc5"
+  },
+  "createdAt": {
+    "$date": "2023-04-17T19:43:55.936Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643dcbab4a945850e130eccc"
+  },
+  "descricao": "Fatura 3",
+  "valor": 300,
+  "dataVencimento": {
+    "$date": "2023-04-20T03:00:00.000Z"
+  },
+  "status": "PENDENTE",
+  "categoria": {
+    "$oid": "643dcbab4a945850e130ecc1"
+  },
+  "user": {
+    "$oid": "643dcbab4a945850e130ecc5"
+  },
+  "createdAt": {
+    "$date": "2023-04-17T19:43:55.936Z"
+  },
+  "__v": 0
+}]
