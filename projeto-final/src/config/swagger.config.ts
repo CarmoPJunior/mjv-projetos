@@ -1,10 +1,10 @@
-
 export const swaggerConfig = {
   swagger: '2.0',
   basePath: '/',
   info: {
     title: 'MJV - Projeto Final - Gerenciamento de contas a pagar',
     version: '1.0.0',
+    description: 'Documentação da API da Gerenciamento de contas a pagar',
   },
   schemes: ['http', 'https'],
   consumes: ['application/json'],
