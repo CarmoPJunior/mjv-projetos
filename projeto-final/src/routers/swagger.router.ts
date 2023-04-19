@@ -6,9 +6,9 @@ class SwaggerRoutes {
   async load(): Promise<Router> {
     const swaggerRoute = Router();
     const document = await SwaggerDocument.load();
-    swaggerRoute.use('/api/docs', serve);
-    swaggerRoute.get('/api/docs', setup(document));
-    swaggerRoute.get('/api/docs.json', (_: Request, res: Response) =>
+    swaggerRoute.use('/', serve);
+    swaggerRoute.get('/', setup(document));
+    swaggerRoute.get('/docs.json', (_: Request, res: Response) =>
       res.json(document)
     );
 

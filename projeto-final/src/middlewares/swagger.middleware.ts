@@ -1,34 +1,14 @@
 import fs from 'fs';
 import { resolve } from 'path';
+import { swaggerConfig } from '../config/swagger.config';
+
 
 class SwaggerConfig {
-  private readonly config: any;
-
+  private readonly config: any = swaggerConfig;
   private paths = {};
-
   private definitions = {};
 
   constructor() {
-    // Aqui fazemos uma configuração inicial, informando o nome da aplicação e definindo alguns tipos
-    this.config = {
-      swagger: '2.0',
-      basePath: '/api',
-      info: {
-        title: 'Tutorial de Node.JS',
-        version: '1.0.0',
-      },
-      schemes: ['http', 'https'],
-      consumes: ['application/json'],
-      produces: ['application/json'],
-      securityDefinitions: {
-        Bearer: {
-          description: 'JWT token',
-          type: 'apiKey',
-          in: 'header',
-          name: 'Authorization',
-        },
-      },
-    };
 
     this.definitions = {
       ErrorResponse: {
@@ -63,11 +43,13 @@ class SwaggerConfig {
    * @returns
    */
   public async load(): Promise<{}> {
-    const dir = await fs.readdirSync(resolve(__dirname, '..'));
+    const dir = await fs.readdirSync(resolve(__dirname, '../docs'));
+
+    console.log(dir)
     const swaggerDocument = dir.reduce(
       (total, path) => {
         try {
-          const swagger = require(`../src/${path}/swagger`);
+          const swagger = require(`../docs/${path}`);
           const aux = total;
           aux.paths = { ...total.paths, ...swagger.default.paths };
           if (swagger.default.definitions) {

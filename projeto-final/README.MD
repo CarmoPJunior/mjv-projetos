@@ -81,3 +81,6 @@ ou
 
 > localhost:3000/fatura
 
+## Rota da documentação
+
+> localhost:3000/doc/
