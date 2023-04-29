@@ -23,7 +23,7 @@ router.get('/:id', async (req: Request, res: Response) => {
   }
 });
 
-router.get('/porStatus/:status', async (req: Request, res: Response) => {
+router.get('/por-status/:status', async (req: Request, res: Response) => {
   try {
     const fatura = await FaturaService.getAllByStatus(req.params.status);
     res.send({ Fatura: fatura });

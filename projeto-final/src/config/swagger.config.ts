@@ -10,11 +10,14 @@ export const swaggerConfig = {
   consumes: ['application/json'],
   produces: ['application/json'],
   securityDefinitions: {
-    JWT: {
-      description: 'JWT token',
+    bearerAuth: {
       type: 'apiKey',
+      scheme: 'bearer',
       in: 'header',
       name: 'Authorization',
+      bearerFormat: 'JWT',
+      description: 'JWT token - Enter the token with the `Bearer: ` prefix, ex. "Bearer abcde12345'
+
     },
   },
 };

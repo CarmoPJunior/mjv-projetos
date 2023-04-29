@@ -6,7 +6,7 @@ const paths = {
       description: 'Get user by Id',
       security: [
         {
-          Bearer: [],
+          bearerAuth: [],
         },
       ],
       parameters: [
@@ -53,7 +53,7 @@ const paths = {
       description: 'Update user',
       security: [
         {
-          Bearer: [],
+          bearerAuth: [],
         },
       ],
       parameters: [
@@ -108,7 +108,7 @@ const paths = {
       description: 'Delete User',
       security: [
         {
-          Bearer: [],
+          bearerAuth: [],
         },
       ],
       parameters: [
@@ -154,7 +154,7 @@ const paths = {
       description: 'Create user',
       security: [
         {
-          Bearer: [],
+          bearerAuth: [],
         },
       ],
       parameters: [
@@ -194,7 +194,7 @@ const paths = {
       description: 'Obter usuários',
       security: [
         {
-          Bearer: [],
+          bearerAuth: [],
         },
       ],
       parameters: [ ],

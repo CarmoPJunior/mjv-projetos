@@ -21,7 +21,7 @@ router.get('/:id', async (req: Request, res: Response) => {
   }
 });
 
-router.get('/porNome/:nome', async (req: Request, res: Response) => {
+router.get('/por-nome/:nome', async (req: Request, res: Response) => {
   try {
     const categoria = await CategoriaService.getByName(req.params.nome);
     res.send({ Categoria: categoria });
